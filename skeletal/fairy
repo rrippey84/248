@@ -1,0 +1,40 @@
+[gd_scene load_steps=2 format=3]
+
+[node name="FairyRoot" type="Node2D"]
+position = Vector2(0, 0)
+
+[node name="Skeleton2D" type="Skeleton2D" parent="."]
+bones = [
+	"TorsoBone",
+	"HeadBone",
+	"LeftArmBone",
+	"RightArmBone",
+	"LeftLegBone",
+	"RightLegBone",
+	"LeftWingBone",
+    "RightWingBone"
+]
+
+[node name="TorsoBone" type="Bone2D" parent="Skeleton2D"]
+rest = Transform2D(0, Vector2(0, 0))
+
+[node name="HeadBone" type="Bone2D" parent="TorsoBone"]
+rest = Transform2D(0, Vector2(0, -40))
+
+[node name="LeftArmBone" type="Bone2D" parent="TorsoBone"]
+rest = Transform2D(0, Vector2(-25, -10))
+
+[node name="RightArmBone" type="Bone2D" parent="TorsoBone"]
+rest = Transform2D(0, Vector2(25, -10))
+
+[node name="LeftLegBone" type="Bone2D" parent="TorsoBone"]
+rest = Transform2D(0, Vector2(-15, 40))
+
+[node name="RightLegBone" type="Bone2D" parent="TorsoBone"]
+rest = Transform2D(0, Vector2(15, 40))
+
+[node name="LeftWingBone" type="Bone2D" parent="TorsoBone"]
+rest = Transform2D(0, Vector2(-20, -30))
+
+[node name="RightWingBone" type="Bone2D" parent="TorsoBone"]
+rest = Transform2D(0, Vector2(20, -30))
